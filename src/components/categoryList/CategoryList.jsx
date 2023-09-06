@@ -13,7 +13,7 @@ const getData = async () => {
   }
 
   return res.json();
-};
+}
 
 const CategoryList = async () => {
   const data = await getData();
