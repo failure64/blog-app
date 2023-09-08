@@ -22,12 +22,16 @@ const CategoryList = async () => {
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
         {data?.map((item) => (
+
           <Link
             href="/blog?cat=style"
             className={`${styles.category} ${styles[item.slug]}`}
             key={item._id}
+            //_id because of mongo
           >
+          {/* if there is an image  */}
             {item.img && (
+              //then only show image
               <Image
                 src={item.img}
                 alt=""

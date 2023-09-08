@@ -17,7 +17,9 @@ const getData = async (page, cat) =>{
   }
 
   return res.json();
-};
+}
+
+//page here is the pagination one
 
 const CardList = async ({ page, cat }) => {
   const { posts, count } = await getData(page, cat);
@@ -25,7 +27,7 @@ const CardList = async ({ page, cat }) => {
   const POST_PER_PAGE = 2;
 
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
-  const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
+  const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count; //more items
 
   return (
     <div className={styles.container}>
