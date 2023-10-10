@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) 
+This is a web app made using Next.js 
 ## Getting Started
 
 First, run the development server:
